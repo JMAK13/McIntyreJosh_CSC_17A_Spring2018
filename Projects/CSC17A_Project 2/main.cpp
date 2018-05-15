@@ -15,8 +15,9 @@
 using namespace std;
 
 //User Libraries
-#include "Deck.h"
 #include "Card.h"
+#include "Deck.h"
+
 
 //Function Prototypes
 
@@ -81,10 +82,21 @@ int main(int argc, char** argv) {
             cout<<"\n";
             
             //Card Testing
-            Card *c=new Card(12);
-            c->setSuit("Spades");
-            cout<<c->getName(c->getVal())<<" of "<<c->getSuit()<<endl;
-            delete c;
+            Deck<Card> deck(52);
+            deck.shuffle();
+            int *hand1=deck.deal(52);
+            Card **c=new Card*[52];
+            for(int i=0; i<52; i++){
+                c[i]=new Card(hand1[i]);
+                if(hand1[i]>0&&hand1[i]<=13) c[i]->setSuit("Spades");
+                if(hand1[i]>13&&hand1[i]<=26) c[i]->setSuit("Clubs");
+                if(hand1[i]>26&&hand1[i]<=39) c[i]->setSuit("Hearts");
+                if(hand1[i]>39&&hand1[i]<=52) c[i]->setSuit("Diamonds");
+                cout<<c[i]->getName(c[i]->getVal())<<" of "<<c[i]->getSuit()<<endl;
+            }
+            
+            delete []c;
+            delete []hand1;
             
             break;
         }

@@ -28,9 +28,9 @@ Deck<T>::Deck(int numCard){
     numCard>0?nCards=numCard:nCards=52;
     card=new T*[nCards];
     //Allocates Memory for Cards
-    index=new int*[nCards];
+    index=new int[nCards];
     for(int i=0; i<nCards; i++){
-        card[i]=new T(i%52);
+        card[i]=new T(i+1);
         index[i]=i;
     }
 }
@@ -40,8 +40,19 @@ Deck<T>::~Deck(){
     //Deallocates Memory
     for(int i=0; i<nCards; i++){
         delete card[i];
-        delete[] card;
+        
     }
+    delete []card;
+}
+
+template <class T>
+int *Deck<T>::deal(int numCard){
+    int *hand=new int[numCard];
+    for(int i=delt; i<numCard+delt; i++){
+        hand[i]=index[i]+1;
+    }
+    delt+=numCard;
+    return hand;
 }
 
 template<class T>

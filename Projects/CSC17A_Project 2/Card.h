@@ -7,24 +7,23 @@
 #ifndef CARD_H
 #define CARD_H
 
-#include <string>
-using namespace std;
+#include "AbstractCard.h"
 
-class Card {
+class Card:public AbstractCard{
     private:
-        string suit;
+        std::string suit;
         int value;
     public:
         Card();
+        Card(int);
         ~Card();
-        string getSuit()const{return suit;}
-        int getVal()const{return value;}
-        setSuit(string);
+        virtual std::string getSuit()const override{return suit;}
+        virtual int getVal()const override{return value;}
+        setSuit(std::string);
         setVal(int);
         bool operator>(const Card &);
         bool operator<(const Card &);
-        string toString(int);
+        virtual std::string getName(int)override;
 };
 
 #endif /* CARD_H */
-

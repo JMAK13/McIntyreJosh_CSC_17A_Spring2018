@@ -4,9 +4,16 @@
  * Created on May 9, 2018, 10:23 AM
  */
 
+#include "AbstractCard.h"
 #include "Card.h"
+using namespace std;
 
-Card::Card(){
+Card::Card() : AbstractCard(){
+}
+
+Card::Card(int v) : AbstractCard(){
+    if(v<=13&&v>=1) value=v;
+    else {v%=13; v==0?value=13:value=v;}
 }
 
 Card::~Card(){
@@ -43,7 +50,7 @@ bool Card::operator<(const Card &right){
     return result;
 }
 
-string Card::toString(int v){
+string Card::getName(int v){
     string s;
     if(v==1)s="Ace";
     if(v==2)s="Two";

@@ -12,10 +12,11 @@
 #include <fstream>      //fstream,write,read
 #include <cstdlib>      //rand,srand
 #include <ctime>        //time
-#include "Card.h"
 using namespace std;
 
 //User Libraries
+#include "Deck.h"
+#include "Card.h"
 
 //Function Prototypes
 
@@ -66,7 +67,7 @@ int main(int argc, char** argv) {
             //Declare Game Variables
             string name1,name2;
             fstream dataFile("players.dat",ios::out | ios::binary);
-            Card c[52]={};
+            
             
             //Ask Players For Their Names and Write Them to Binary File
             cout<<"Player 1, please enter your name:  ";
@@ -79,17 +80,11 @@ int main(int argc, char** argv) {
             dataFile.close();
             cout<<"\n";
             
-            //Beta Test for Deck of Cards
-            for(int i=1; i<=52; i++){
-                
-                c[i].setVal(i);
-                if(i>0&&i<=13) c[i].setSuit("Spades");
-                if(i>=14&&i<=26) c[i].setSuit("Clubs");
-                if(i>=27&&i<=39) c[i].setSuit("Hearts");
-                if(i>=40&&i<=52) c[i].setSuit("Diamonds");
-                
-                cout<<c[i].toString(c[i].getVal())<<" of "<<c[i].getSuit()<<endl;
-            }
+            //Card Testing
+            Card *c=new Card(12);
+            c->setSuit("Spades");
+            cout<<c->getName(c->getVal())<<" of "<<c->getSuit()<<endl;
+            delete c;
             
             break;
         }
@@ -98,4 +93,3 @@ int main(int argc, char** argv) {
     //Exits Program
     return 0;
 }
-

@@ -49,7 +49,7 @@ template <class T>
 int *Deck<T>::deal(int numCard){
     int *hand=new int[numCard];
     for(int i=delt; i<numCard+delt; i++){
-        hand[i]=index[i]+1;
+        hand[i-delt]=index[i]+1;
     }
     delt+=numCard;
     return hand;

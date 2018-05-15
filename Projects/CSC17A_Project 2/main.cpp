@@ -81,22 +81,37 @@ int main(int argc, char** argv) {
             dataFile.close();
             cout<<"\n";
             
-            //Card Testing
+            //Initialize Deck
             Deck<Card> deck(52);
-            deck.shuffle();
-            int *hand1=deck.deal(52);
+            //Allocate Memory for Cards
             Card **c=new Card*[52];
+            //Initialize Cards
             for(int i=0; i<52; i++){
-                c[i]=new Card(hand1[i]);
-                if(hand1[i]>0&&hand1[i]<=13) c[i]->setSuit("Spades");
-                if(hand1[i]>13&&hand1[i]<=26) c[i]->setSuit("Clubs");
-                if(hand1[i]>26&&hand1[i]<=39) c[i]->setSuit("Hearts");
-                if(hand1[i]>39&&hand1[i]<=52) c[i]->setSuit("Diamonds");
+                c[i]=new Card(i+1);
+                if(i>=0&&i<=12) c[i]->setSuit("Spades");
+                if(i>=13&&i<=25) c[i]->setSuit("Clubs");
+                if(i>=26&&i<=38) c[i]->setSuit("Hearts");
+                if(i>=39&&i<=51) c[i]->setSuit("Diamonds");
                 cout<<c[i]->getName(c[i]->getVal())<<" of "<<c[i]->getSuit()<<endl;
             }
+            //Shuffle Deck
+            deck.shuffle();
+            //Deal Cards
+            int *hand1=deck.deal(26);
+            int *hand2=deck.deal(26);
+            //Display Player 1's Hand
+            for(int i=0; i<26; i++){
+                cout<<i+1<<") "<<c[hand1[i]-1]->getName(c[hand1[i]-1]->getVal())<<" of "<<c[hand1[i]-1]->getSuit()<<endl;
+            }
+            //Display Player 2's Hand
+            for(int i=0; i<26; i++){
+                cout<<i+27<<") "<<c[hand2[i]-1]->getName(c[hand2[i]-1]->getVal())<<" of "<<c[hand2[i]-1]->getSuit()<<endl;
+            }
             
+            //Deallocate Memory
             delete []c;
             delete []hand1;
+            delete []hand2;
             
             break;
         }

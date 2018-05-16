@@ -15,9 +15,16 @@ class Deck{
         int nCards;
         int delt;
     public:
+        //Constructor Taking Number of Cards as Parameter
         Deck(int);
+        
+        //Destructor
         ~Deck();
+        
+        //Deal Member Function
         int *deal(int);
+        
+        //Shuffle Member Function
         shuffle();
 };
 

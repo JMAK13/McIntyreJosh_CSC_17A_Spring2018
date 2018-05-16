@@ -32,24 +32,6 @@ Card::setVal(int v){
     else {v%=13; v==0?value=13:value=v;}
 }
 
-bool Card::operator>(const Card &right){
-    bool result;
-    
-    if(value>right.getVal()) result=true;
-    else result=false;
-    
-    return result;
-}
-
-bool Card::operator<(const Card &right){
-    bool result;
-    
-    if(value<right.getVal()) result=true;
-    else result=false;
-    
-    return result;
-}
-
 string Card::getName(int v){
     string s;
     if(v==1)s="Ace";

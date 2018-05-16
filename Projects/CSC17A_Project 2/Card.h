@@ -14,15 +14,32 @@ class Card:public AbstractCard{
         std::string suit;
         int value;
     public:
+        //Empty Constructor
         Card();
+        
+        //Constructor Taking a Card Value is a Parameter
         Card(int);
+        
+        //Destructor
         ~Card();
+        
+        //Suit Accessor Member Function
         virtual std::string getSuit()const override{return suit;}
+        
+        //Value Accessor Member Function
         virtual int getVal()const override{return value;}
+        
+        //Suit Mutator Member Function
         setSuit(std::string);
+        
+        //Value Mutator Member Function
         setVal(int);
-        bool operator>(const Card &);
-        bool operator<(const Card &);
+        
+        //Relational Operator Overloaded Functions
+        bool operator > (const Card &right) {return this->value>right.getVal();}
+        bool operator < (const Card &right) {return this->value<right.getVal();}
+        
+        //Name Accessor Member Function
         virtual std::string getName(int)override;
 };
 

@@ -7,8 +7,10 @@
 #ifndef ABSTRACTCARD_H
 #define ABSTRACTCARD_H
 
+//Included System Libraries
 #include <string>
 
+//Abstract Base Card Class
 class AbstractCard {
     virtual std::string getSuit()const=0;
     virtual int getVal()const=0;

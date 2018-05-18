@@ -7,6 +7,11 @@
 #ifndef DECK_H
 #define DECK_H
 
+<<<<<<< HEAD
+//Deck Templated Class
+=======
+//Template Deck Class
+>>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 template <class T>
 class Deck{
     private:
@@ -40,6 +45,11 @@ class Deck{
         void setDelt(int);
 };
 
+<<<<<<< HEAD
+//Deck Constructor
+=======
+//Default Deck Constructor
+>>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 template <class T>
 Deck<T>::Deck(){
     //Sets Default Variable Values
@@ -53,6 +63,7 @@ Deck<T>::Deck(){
     }
 }
 
+//Deck Destructor
 template <class T>
 Deck<T>::~Deck(){
     //Deallocates Memory
@@ -63,12 +74,14 @@ Deck<T>::~Deck(){
     delete []card;
 }
 
+//Index Mutator Member Function
 template <class T>
 void Deck<T>::setI(int i, int v){
     if(i>=0) index[i]=v;
     //else throw invalid index exception
 }
 
+//Delt Mutator Member Function
 template <class T>
 void Deck<T>::setDelt(int i){
     if(i>=0) delt=i;

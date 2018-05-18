@@ -18,6 +18,7 @@ using namespace std;
 #include "Card.h"
 #include "Deck.h"
 #include "Player.h"
+#include "Dealer.h"
 
 //Function Prototypes
 void prntCrd(Deck<Card> &d,int);            //Prints a Card
@@ -98,9 +99,12 @@ int main(int argc, char** argv) {
 
                 //Initialize Player Objects
                 Player p1(name1),p2(name2);
+                
+                //Initializes Dealer Object
+                Dealer<Card> dlr;
 
-                //Make Dealer Shuffle Deck
-                p1.shuffle(d);
+                //Dealer Shuffle Deck
+                dlr.shuffle(d);
 
                 //Initialize Deck Suits, Values, and the Dealer's Hand's Indexes
                 for(int i=0; i<52; i++){
@@ -111,12 +115,15 @@ int main(int argc, char** argv) {
                     if(i>=39&&i<=51) d.getCard(i)->setSuit("Diamonds");
                 }
 
+<<<<<<< HEAD
+                //Dealer Deals Cards to Players
+                dlr.dealCrds(p1,d,26);
+                dlr.dealCrds(p2,d,26);
+=======
                 //Deals Cards to Both Players
                 p1.dealCrds(d,26);
                 p2.dealCrds(d,26);
-                
-                //for(int i=0; i<d.numCards(); i++) cout<<p1.getHand(i)<<endl;
-                //for(int i=0; i<d.numCards(); i++) cout<<p2.getHand(i)<<endl;
+>>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 
                 //Game Loop
                 do{
@@ -156,8 +163,17 @@ int main(int argc, char** argv) {
                         cout<<"War has been initiated!"<<endl;
                         war(p1,p2,d);
                     }
+<<<<<<< HEAD
+                     
+                    //Clears Screen
+                    cout<<"\n\n\n\n";
                         
+=======
                         
+                    //Clears Screen
+                    cout<<endl<<endl<<endl<<endl<<endl<<endl;
+                    
+>>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
                 //End Game Condition
                 }while(p1.cntHand()!=52&&p2.cntHand()!=52);
 
@@ -224,9 +240,9 @@ void war(Player &p1, Player &p2, Deck<Card> &d){
         
         //Display Cards Placed Down
         cout<<"Player 1 placed down a ";
-            prntCrd(d,p1.getTop());
+            prntCrd(d,crd1);
         cout<<"Player 2 placed down a ";
-            prntCrd(d,p2.getTop());
+            prntCrd(d,crd2);
             
         //If Player 1's Card is Higher
         if(*d.getCard(crd1) > *d.getCard(crd2)){

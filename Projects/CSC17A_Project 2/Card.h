@@ -7,8 +7,14 @@
 #ifndef CARD_H
 #define CARD_H
 
+//Included User Libraries
 #include "AbstractCard.h"
 
+<<<<<<< HEAD
+//Card Class Derived From AbstractCard Base Class
+=======
+//Card Class Derived from Abstract Base Card Class
+>>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 class Card:public AbstractCard{
     private:
         std::string suit;
@@ -35,9 +41,13 @@ class Card:public AbstractCard{
         //Value Mutator Member Function
         void setVal(int);
         
-        //Relational Operator Overloaded Functions
+        //Overloaded > Function
         bool operator > (const Card &right);
+        
+        //Overloaded < Function
         bool operator < (const Card &right);
+        
+        //Overloaded == Function
         bool operator == (const Card &right);
         
         //Name Accessor Member Function

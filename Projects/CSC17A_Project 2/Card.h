@@ -10,11 +10,7 @@
 //Included User Libraries
 #include "AbstractCard.h"
 
-<<<<<<< HEAD
-//Card Class Derived From AbstractCard Base Class
-=======
 //Card Class Derived from Abstract Base Card Class
->>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 class Card:public AbstractCard{
     private:
         std::string suit;

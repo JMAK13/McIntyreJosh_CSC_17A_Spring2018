@@ -8,10 +8,13 @@
 #include "Player.h"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Player Constructor
 Player::Player():GameEntity(){
     isPl=true;
 =======
+=======
+>>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 //Default Player Constructor
 Player::Player(){
 >>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
@@ -24,10 +27,13 @@ Player::Player(){
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Player Overloaded Constructor
 Player::Player(string s):GameEntity(){
     isPl=true;
 =======
+=======
+>>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 //Overloaded Player Constructor with Name Parameter
 Player::Player(string s){
 >>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
@@ -45,7 +51,11 @@ Player::~Player(){
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Hand Mutator Member Function
+=======
+//Index Mutator Member Function
+>>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 =======
 //Index Mutator Member Function
 >>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
@@ -55,8 +65,11 @@ void Player::setHand(int i, int v){
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Counts Amount of Cards in Player's Hand
 =======
+=======
+>>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 //Shuffles Indexes in Player's Hand
 void Player::shuffle(Deck<Card> &d){
     for(int shfl=0; shfl<=3; shfl++){
@@ -83,6 +96,9 @@ void Player::dealCrds(Deck<Card> &d, int n){
 }
 
 //Counts Indexes in Player's Array
+<<<<<<< HEAD
+>>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
+=======
 >>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 int Player::cntHand(){
     int count=0;
@@ -93,7 +109,11 @@ int Player::cntHand(){
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Gets Top Card of Player's Hand
+=======
+//Gets Index at Top of Player's Array
+>>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 =======
 //Gets Index at Top of Player's Array
 >>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
@@ -104,7 +124,11 @@ int Player::getTop(){
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Clears Top Card of Player's Hand
+=======
+//Sets Index at Top of Player's Array to -1
+>>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 =======
 //Sets Index at Top of Player's Array to -1
 >>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
@@ -115,7 +139,11 @@ void Player::setTop(){
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Moves Top Card of Player's Hand to Bottom
+=======
+//Moves Index at Top of Player's Array to the Bottom of Player's Array
+>>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 =======
 //Moves Index at Top of Player's Array to the Bottom of Player's Array
 >>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626

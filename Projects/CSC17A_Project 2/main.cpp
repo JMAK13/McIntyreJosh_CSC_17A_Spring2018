@@ -123,6 +123,9 @@ int main(int argc, char** argv) {
                 //Deals Cards to Both Players
                 p1.dealCrds(d,26);
                 p2.dealCrds(d,26);
+<<<<<<< HEAD
+>>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
+=======
 >>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 
                 //Game Loop
@@ -168,8 +171,14 @@ int main(int argc, char** argv) {
                     //Clears Screen
                     cout<<"\n\n\n\n";
                         
+<<<<<<< HEAD
 =======
                         
+                    //Clears Screen
+                    cout<<endl<<endl<<endl<<endl<<endl<<endl;
+                    
+>>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
+=======
                     //Clears Screen
                     cout<<endl<<endl<<endl<<endl<<endl<<endl;
                     

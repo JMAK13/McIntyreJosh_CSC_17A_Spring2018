@@ -5,6 +5,7 @@
  */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Include User Libraries
 #include "AbstractCard.h"
 #include "Card.h"
@@ -26,13 +27,28 @@ Card::Card() : AbstractCard(){
 
 //Overloaded Card Constructor
 >>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
+=======
+//Included User Libraries
+#include "Card.h"
+using namespace std;
+
+//Default Card Constructor
+Card::Card() : AbstractCard(){
+}
+
+//Overloaded Card Constructor
+>>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 Card::Card(int v) : AbstractCard(){
     if(v<=13&&v>=1) value=v;
     else {v%=13; v==0?value=13:value=v;}
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Card Destructor
+=======
+//Destructor
+>>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 =======
 //Destructor
 >>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
@@ -75,7 +91,11 @@ string Card::getName(int v){
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Overloaded > Function
+=======
+//Overloaded > Operator Function
+>>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 =======
 //Overloaded > Operator Function
 >>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
@@ -87,7 +107,11 @@ bool Card::operator > (const Card &right){
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Overloaded < Function
+=======
+//Overloaded < Operator Function
+>>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 =======
 //Overloaded < Operator Function
 >>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
@@ -99,7 +123,11 @@ bool Card::operator < (const Card &right){
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Overloaded == Function
+=======
+//Overloaded == Operator Function
+>>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 =======
 //Overloaded == Operator Function
 >>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626

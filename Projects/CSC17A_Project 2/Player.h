@@ -12,10 +12,7 @@
 
 //Included User Libraries
 <<<<<<< HEAD
-<<<<<<< HEAD
 #include "GameEntity.h"
-=======
->>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 =======
 >>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 #include "Card.h"
@@ -24,11 +21,8 @@ using namespace std;
 
 //Player Class
 <<<<<<< HEAD
-<<<<<<< HEAD
 class Player:public GameEntity{
 =======
-=======
->>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 class Player{
 >>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
     private:
@@ -46,7 +40,6 @@ class Player{
         ~Player();
         
 <<<<<<< HEAD
-<<<<<<< HEAD
         //Overridden isPlayer Function from Base Class
         virtual bool isPlayer()const override{return isPl;}
         
@@ -54,17 +47,12 @@ class Player{
         string getName()const{return name;}
         
 =======
-=======
->>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
         //Name Accessor Member Function
         string getName()const{return name;}
         
         //Shuffles Player's Array of Indexes User to Query Cards
         void shuffle(Deck<Card> &);
         
-<<<<<<< HEAD
->>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
-=======
 >>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
         //Gets Index from Array of Indexes Given its Index in that Array
         int getHand(int i)const{return hand[i];}
@@ -73,12 +61,6 @@ class Player{
         void setHand(int,int);
         
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        //Deals Designated Amount of Cards from a Deck to Player
-        void dealCrds(Deck<Card> &,int);
-        
->>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 =======
         //Deals Designated Amount of Cards from a Deck to Player
         void dealCrds(Deck<Card> &,int);

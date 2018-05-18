@@ -114,9 +114,6 @@ int main(int argc, char** argv) {
                 //Deals Cards to Both Players
                 p1.dealCrds(d,26);
                 p2.dealCrds(d,26);
-                
-                //for(int i=0; i<d.numCards(); i++) cout<<p1.getHand(i)<<endl;
-                //for(int i=0; i<d.numCards(); i++) cout<<p2.getHand(i)<<endl;
 
                 //Game Loop
                 do{
@@ -157,7 +154,9 @@ int main(int argc, char** argv) {
                         war(p1,p2,d);
                     }
                         
-                        
+                    //Clears Screen
+                    cout<<endl<<endl<<endl<<endl<<endl<<endl;
+                    
                 //End Game Condition
                 }while(p1.cntHand()!=52&&p2.cntHand()!=52);
 

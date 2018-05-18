@@ -7,8 +7,10 @@
 #ifndef CARD_H
 #define CARD_H
 
+//Included User Libraries
 #include "AbstractCard.h"
 
+//Card Class Derived from Abstract Base Card Class
 class Card:public AbstractCard{
     private:
         std::string suit;

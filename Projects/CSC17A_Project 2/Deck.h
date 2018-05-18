@@ -7,11 +7,7 @@
 #ifndef DECK_H
 #define DECK_H
 
-<<<<<<< HEAD
 //Deck Templated Class
-=======
-//Template Deck Class
->>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 template <class T>
 class Deck{
     private:

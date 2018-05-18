@@ -30,14 +30,15 @@ class Card:public AbstractCard{
         virtual int getVal()const override{return value;}
         
         //Suit Mutator Member Function
-        setSuit(std::string);
+        void setSuit(std::string);
         
         //Value Mutator Member Function
-        setVal(int);
+        void setVal(int);
         
         //Relational Operator Overloaded Functions
         bool operator > (const Card &right) {return this->value>right.getVal();}
         bool operator < (const Card &right) {return this->value<right.getVal();}
+        bool operator == (const Card &right) {return this->value==right.getVal();}
         
         //Name Accessor Member Function
         virtual std::string getName(int)override;

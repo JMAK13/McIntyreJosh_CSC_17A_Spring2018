@@ -19,7 +19,7 @@ Card::Card(int v) : AbstractCard(){
 Card::~Card(){
 }
 
-Card::setSuit(string s){
+void Card::setSuit(string s){
     string array[4]={"Spades","Clubs","Hearts","Diamonds"};
     for(int i=0;i<4;i++){
         if(s.compare(array[i])==0) suit=s;
@@ -27,7 +27,7 @@ Card::setSuit(string s){
     }
 }
 
-Card::setVal(int v){
+void Card::setVal(int v){
     if(v<=13&&v>=1) value=v;
     else {v%=13; v==0?value=13:value=v;}
 }

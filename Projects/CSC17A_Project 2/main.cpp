@@ -17,13 +17,11 @@ using namespace std;
 //User Libraries
 #include "Card.h"
 #include "Deck.h"
+#include "Player.h"
 
 //Function Prototypes
-void toBot(int **,int,int);     //Puts the top card of a player's hand on the bottom
-int getTop(int **,int);         //Gets the top card of a player's hand
-void setTop(int **,int);        //Resets the top card of a player's hand to 0
-void war(int **, Card **);       //Initiates the 'war' protocol
-int cntCard(int **,int);
+void prntCrd(Deck<Card> &d,int);            //Prints a Card
+void war(Player &,Player &,Deck<Card> &);   //Initiates War Protocol
 
 //Main Function
 int main(int argc, char** argv) {
@@ -89,126 +87,104 @@ int main(int argc, char** argv) {
             dataFile.close();
             cout<<"\n";
             
-            //Initialize Deck
-            Deck<Card> deck(52);
-            
-            //Allocate Memory for Cards
-            Card **c=new Card*[52];
-            //Initialize Cards
-            for(int i=0; i<52; i++){
-                c[i]=new Card(i+1);
-                if(i>=0&&i<=12) c[i]->setSuit("Spades");
-                if(i>=13&&i<=25) c[i]->setSuit("Clubs");
-                if(i>=26&&i<=38) c[i]->setSuit("Hearts");
-                if(i>=39&&i<=51) c[i]->setSuit("Diamonds");
-                //cout<<c[i]->getName(c[i]->getVal())<<" of "<<c[i]->getSuit()<<endl;
-            }
-            
-            //Shuffle Deck
-            deck.shuffle();
-            
-            //Deal Cards to Both Players
-            int *hand1=deck.deal(26);
-            int *hand2=deck.deal(26);
-            int **hands=new int*[2];
-            hands[0]=new int[52];
-            hands[1]=new int[52];
-            for(int i=0; i<52; i++){
-                if(i<26){
-                    hands[0][i]=hand1[i];
-                    hands[1][i]=hand2[i];
-                }else{
-                    hands[0][i]=0;
-                    hands[1][i]=0;
-                }
-            }
-            delete []hand1;
-            delete []hand2;
-            
+            //Game Loop
             char ans;
             do{
-                //Initialize Deck
-                Deck<Card> deck(52);
-
-                //Allocate Memory for Cards
-                Card **c=new Card*[52];
-                
-                //Initialize Cards
-                for(int i=0; i<52; i++){
-                    c[i]=new Card(i+1);
-                    if(i>=0&&i<=12) c[i]->setSuit("Spades");
-                    if(i>=13&&i<=25) c[i]->setSuit("Clubs");
-                    if(i>=26&&i<=38) c[i]->setSuit("Hearts");
-                    if(i>=39&&i<=51) c[i]->setSuit("Diamonds");
-                    //cout<<c[i]->getName(c[i]->getVal())<<" of "<<c[i]->getSuit()<<endl;
-                }
-
-                //Shuffle Deck
-                deck.shuffle();
-
-                //Deal Cards to Both Players
-                int *hand1=deck.deal(26);
-                int *hand2=deck.deal(26);
-                int **hands=new int*[2];
-                hands[0]=new int[52];
-                hands[1]=new int[52];
-                for(int i=0; i<52; i++){
-                    if(i<26){
-                        hands[0][i]=hand1[i];
-                        hands[1][i]=hand2[i];
-                    }else{
-                        hands[0][i]=0;
-                        hands[1][i]=0;
-                    }
-                }
-                delete []hand1;
-                delete []hand2;
-                
+                //Declares Variables
+                string winner;
                 ans=' ';
+                
+                //Initialize Deck Object
+                Deck<Card> d;
+
+                //Initialize Player Objects
+                Player p1(name1),p2(name2);
+
+                //Make Dealer Shuffle Deck
+                p1.shuffle(d);
+
+                //Initialize Deck Suits, Values, and the Dealer's Hand's Indexes
+                for(int i=0; i<52; i++){
+                    //Initialize Card Suits
+                    if(i>=0 &&i<=12) d.getCard(i)->setSuit("Spades");
+                    if(i>=13&&i<=25) d.getCard(i)->setSuit("Clubs");
+                    if(i>=26&&i<=38) d.getCard(i)->setSuit("Hearts");
+                    if(i>=39&&i<=51) d.getCard(i)->setSuit("Diamonds");
+                }
+
+                //Deals Cards to Both Players
+                p1.dealCrds(d,26);
+                p2.dealCrds(d,26);
+                
+                //for(int i=0; i<d.numCards(); i++) cout<<p1.getHand(i)<<endl;
+                //for(int i=0; i<d.numCards(); i++) cout<<p2.getHand(i)<<endl;
 
                 //Game Loop
                 do{
-                    cout<<endl<<endl;
+                    
+                    //Prompt Player 1 to Begin Turn & Display Card Drawn
                     cout<<"Press enter to begin turn: ";
                     cin.get();
-                    cout<<"Player 1 placed down a "<<c[getTop(hands,0)-1]->getName(c[getTop(hands,0)-1]->getVal())<<" of "<<c[getTop(hands,0)-1]->getSuit()<<endl;
-                    cout<<"Player 2 placed down a "<<c[getTop(hands,1)-1]->getName(c[getTop(hands,1)-1]->getVal())<<" of "<<c[getTop(hands,1)-1]->getSuit()<<endl;
-                    if(*c[getTop(hands,0)-1] > *c[getTop(hands,1)-1]) {
-                        cout<<"Player 1 wins this round!"<<endl;
-                        toBot(hands,getTop(hands,0),0);
-                        toBot(hands,getTop(hands,1),0);
-                        setTop(hands,0);
-                        setTop(hands,1);
+                    cout<<name1<<"(Player 1) placed down a ";
+                        prntCrd(d,p1.getTop());
+                    
+                    //Prompt Player 2 to Begin Turn & Display Card Drawn
+                    cout<<"Press enter to begin turn: ";
+                    cin.get();
+                    cout<<name2<<"(Player 2) placed down a ";
+                        prntCrd(d,p2.getTop());
+                        
+                    //If Player 1's Card Is Greater
+                    if(*d.getCard(p1.getTop()) > *d.getCard(p2.getTop())) {
+                        cout<<name1<<"(Player 1) wins this round!"<<endl;
+                        p1.toBot(p1.getTop());
+                        p1.toBot(p2.getTop());
+                        p1.setTop();
+                        p2.setTop();
                     }
-                    else if(*c[getTop(hands,0)-1] < *c[getTop(hands,1)-1]) {
-                        cout<<"Player 2 wins this round!"<<endl;
-                        toBot(hands,getTop(hands,1),1);
-                        toBot(hands,getTop(hands,0),1);
-                        setTop(hands,1);
-                        setTop(hands,0);
+                        
+                    //If Player 2's Card is Greater
+                    else if(*d.getCard(p1.getTop()) < *d.getCard(p2.getTop())) {
+                        cout<<name2<<"(Player 2) wins this round!"<<endl;
+                        p2.toBot(p2.getTop());
+                        p2.toBot(p1.getTop());
+                        p2.setTop();
+                        p1.setTop();
                     }
-                    else {
+                        
+                    //If Both Players Card's Have Same Value
+                    else if(*d.getCard(p1.getTop()) == *d.getCard(p2.getTop())){
                         cout<<"War has been initiated!"<<endl;
-                        war(hands,c);
+                        war(p1,p2,d);
                     }
-                }while(cntCard(hands,0)!=52&&cntCard(hands,1)!=52);
+                        
+                        
+                //End Game Condition
+                }while(p1.cntHand()!=52&&p2.cntHand()!=52);
 
                 //Displays Winner
                 cout<<endl<<endl;
-                if(cntCard(hands,0)==52) cout<<"Player 1 wins the game!"<<endl;
-                if(cntCard(hands,1)==52) cout<<"Player 2 wins the game!"<<endl;
+                if(p1.cntHand()==d.numCards()) {
+                    cout<<name1<<"(Player 1) wins the game!"<<endl;
+                    winner=name1;
+                }
+                if(p2.cntHand()==d.numCards()) {
+                    cout<<name2<<"(Player 2) wins the game!"<<endl;
+                    winner=name2;
+                }
 
+                //Write Winner's Name to Binary File
+                fstream file("winners.dat",ios::out | ios::binary);
+                file.write(&winner[0], sizeof(winner));
+                file.close();
+
+                //Asks If Users Would Like to Player Again
                 cout<<"Would you like to play again? [Y/N]";
                 cin>>ans;
-                
-                //Deallocate Memory
-                delete []c;
-                delete []hands[0];
-                delete []hands[1];
-                delete []hands; 
 
             }while(toupper(ans)=='Y');
             
+            //Exits Game Protocol
             break;
         }
     }
@@ -217,93 +193,69 @@ int main(int argc, char** argv) {
     return 0;
 }
 
-//Puts the Player's Top Card on the Bottom
-void toBot(int **hand, int ind, int row){
-    int tmp,tmp2;
-    for(int col=0; col<52; col++) {
-        if(col==0){
-            tmp=hand[row][col];
-            hand[row][col]=ind;
-        }else{
-            tmp2=hand[row][col];
-            hand[row][col]=tmp;
-            tmp=tmp2;
-        }
-    }
-}
-
-//Gets the Top Card of a Player's Hand
-int getTop(int **hand,int row){
-    for(int col=0; col<52; col++){
-        if(hand[row][col+1]==0)return hand[row][col];
-    }
-    return 52;
-}
-
-//Resets the Player's Top Card to Zero
-void setTop(int **hand,int row){
-    for(int col=0; col<52; col++) {
-        if(hand[row][col+1]==0)hand[row][col]=0;
-    }
+//Prints a Card
+void prntCrd(Deck<Card> &d, int n){
+    if(n>=0)cout<<d.getCard(n)->getName(d.getCard(n)->getVal())<<" of "<<d.getCard(n)->getSuit()<<endl;
 }
 
 //Initiates 'war' Protocol
-void war(int **hand, Card **c){
+void war(Player &p1, Player &p2, Deck<Card> &d){
     int wars=1;
     bool end=false;
     
     do{
         bool done=false;
-        int ind1,ind2,col=0;
+        int crd1,crd2,i=0;
         while(!done){
-            if(hand[0][col]==0){
-                ind1=hand[0][col-(wars*2)-1];
+            if(p1.getHand(i)==-1){
+                crd1=p1.getHand(i-(wars*2)-1);
                 done=true;
             }
-            col++;
+            i++;
         }
-        col=0;
+        i=0;
         done=false;
         while(!done){
-            if(hand[1][col]==0){
-                ind2=hand[1][col-(wars*2)-1];
+            if(p2.getHand(i)==-1){
+                crd2=p2.getHand(i-(wars*2)-1);
                 done=true;
             }
-            col++;
+            i++;
         }
-        cout<<"Player 1 placed down a "<<c[ind1-1]->getName(c[ind1-1]->getVal())<<" of "<<c[ind1-1]->getSuit()<<endl;
-        cout<<"Player 2 placed down a "<<c[ind2-1]->getName(c[ind2-1]->getVal())<<" of "<<c[ind2-1]->getSuit()<<endl;
-        if(*c[ind1-1] > *c[ind2-1]){
+        
+        //Display Cards Placed Down
+        cout<<"Player 1 placed down a ";
+            prntCrd(d,p1.getTop());
+        cout<<"Player 2 placed down a ";
+            prntCrd(d,p2.getTop());
+            
+        //If Player 1's Card is Higher
+        if(*d.getCard(crd1) > *d.getCard(crd2)){
             for(int j=0; j<(wars*2)+1; j++){
-                toBot(hand,getTop(hand,0),0);
-                toBot(hand,getTop(hand,1),0);
-                setTop(hand,0);
-                setTop(hand,1);
+                p1.toBot(p1.getTop());
+                p1.toBot(p2.getTop());
+                p1.setTop();
+                p2.setTop();
             }
-            cout<<"Player 1 won the war!"<<endl;
+            cout<<p1.getName()<<"(Player 1) won the war!"<<endl;
             end=true;
         }
-        else if(*c[ind1-1] < *c[ind2-1]){
+            
+        //If Player 2's Card is Higher
+        else if(*d.getCard(crd1) < *d.getCard(crd2)){
             for(int j=0; j<(wars*2)+1; j++){
-                toBot(hand,getTop(hand,1),1);
-                toBot(hand,getTop(hand,0),1);
-                setTop(hand,1);
-                setTop(hand,0);
+                p2.toBot(p2.getTop());
+                p2.toBot(p1.getTop());
+                p2.setTop();
+                p1.setTop();
             }
-            cout<<"Player 2 won the war!"<<endl;
+            cout<<p2.getName()<<"(Player 2) won the war!"<<endl;
             end=true;
         }
-        else{
+            
+        //If Both Players Placed Down Cards of the Same Value
+        else if(*d.getCard(crd1) == *d.getCard(crd2)){
             wars++;
         }
     }while(!end);
-}
-
-//Counts the Number of Cards in a Player's Hand
-int cntCard(int **hand, int row){
-    int count=1;
-    for(int i=0; i<52; i++){
-        if(hand[row][i]>0)count++;
-    }
-    return count;
 }

@@ -37,7 +37,7 @@ int main(int argc, char** argv) {
     //Display Values After Pushing an Element to the Front of the Vector
     cout<<"Vector After Calling push_back(T val): "<<endl;
     
-    vs.push_back(12);
+    vs.push_back(1234);
     
     for(int i=0; i<vs.size(); i++){
         cout<<i+1<<") "<<vs.getElementAt(i)<<endl;

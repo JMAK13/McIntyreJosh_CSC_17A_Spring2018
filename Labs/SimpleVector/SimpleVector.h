@@ -155,7 +155,6 @@ T &SimpleVector<T>::operator[](const int &sub)
 template <class T>
 SimpleVector<T>::push_back(T val){
     arraySize++;
-    //aptr[arraySize-1]=val;
     for(int i=0; i<arraySize; i++){
         aptr[i+1]=aptr[i];
     }

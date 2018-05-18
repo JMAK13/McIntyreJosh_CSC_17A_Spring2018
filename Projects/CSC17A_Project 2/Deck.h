@@ -12,28 +12,39 @@ class Deck{
     private:
         T **card;
         int *index;
-        int nCards;
+        static const int nCards=52;
         int delt;
     public:
         //Constructor Taking Number of Cards as Parameter
-        Deck(int);
+        Deck();
         
         //Destructor
         ~Deck();
         
-        //Deal Member Function
-        int *deal(int);
+        //Card Accessor Member Function
+        T *getCard(int i)const{return card[i];}
         
-        //Shuffle Member Function
-        shuffle();
+        //Card Index Accessor Member Function
+        int getI(int i)const{return index[i];}
+        
+        //Card Index Mutator Member Function
+        void setI(int,int);
+        
+        //Gets Number of Cards in Deck
+        int numCards()const{return nCards;}
+        
+        //Delt Accessor Member Function
+        int getDelt()const{return delt;}
+        
+        //Delt Mutator Member Function
+        void setDelt(int);
 };
 
 template <class T>
-Deck<T>::Deck(int numCard){
+Deck<T>::Deck(){
     //Sets Default Variable Values
-    delt=0;
-    numCard>0?nCards=numCard:nCards=52;
     card=new T*[nCards];
+    delt=0;
     //Allocates Memory for Cards
     index=new int[nCards];
     for(int i=0; i<nCards; i++){
@@ -53,27 +64,14 @@ Deck<T>::~Deck(){
 }
 
 template <class T>
-int *Deck<T>::deal(int numCard){
-    int *hand=new int[numCard];
-    for(int i=delt; i<numCard+delt; i++){
-        hand[i-delt]=index[i]+1;
-    }
-    delt+=numCard;
-    return hand;
+void Deck<T>::setI(int i, int v){
+    if(i>=0) index[i]=v;
+    //else throw invalid index exception
 }
 
-template<class T>
-Deck<T>::shuffle(){
-    for(int j=0;j<nCards;j++){
-        //Random Index Variable
-        int random=rand()%nCards;
-        //Temporary Swap Variable
-        int temp=index[j];
-        //Swaps Original Value With Random Index Value
-        index[j]=index[random];
-        index[random]=temp; 
-    }
+template <class T>
+void Deck<T>::setDelt(int i){
+    if(i>=0) delt=i;
 }
-
 #endif /* DECK_H */
 

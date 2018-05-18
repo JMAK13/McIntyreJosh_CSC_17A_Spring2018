@@ -4,8 +4,6 @@
  * Created on May 9, 2018, 10:23 AM
  */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 //Include User Libraries
 #include "AbstractCard.h"
 #include "Card.h"
@@ -16,7 +14,6 @@ Card::Card() : AbstractCard(){
 }
 
 //Card Overloaded Constructor
-=======
 //Included User Libraries
 #include "Card.h"
 using namespace std;

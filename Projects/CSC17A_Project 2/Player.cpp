@@ -40,31 +40,6 @@ void Player::setHand(int i, int v){
     //else throw invalid index exception
 }
 
-//Shuffles Indexes in Player's Hand
-void Player::shuffle(Deck<Card> &d){
-    for(int shfl=0; shfl<=3; shfl++){
-        for(int i=0; i<d.numCards(); i++){
-            int random=rand()%d.numCards();
-            int temp=d.getI(i);
-            d.setI(i,d.getI(random));
-            d.setI(random,temp);
-        }
-    }
-}
-
-//Deals Indexes to Player's Array of Indexes
-void Player::dealCrds(Deck<Card> &d, int n){
-    if(n+d.getDelt()>52) {}//throw an exception
-    else {
-        int ind=0;
-        for(int i=d.getDelt(); i<n+d.getDelt(); i++){
-            hand[ind]=d.getI(i);
-            ind++;
-        }
-        d.setDelt(d.getDelt()+n);
-    }
-}
-
 //Counts Indexes in Player's Array
 int Player::cntHand(){
     int count=0;

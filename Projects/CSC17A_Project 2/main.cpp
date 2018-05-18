@@ -115,19 +115,14 @@ int main(int argc, char** argv) {
                     if(i>=39&&i<=51) d.getCard(i)->setSuit("Diamonds");
                 }
 
-<<<<<<< HEAD
                 //Dealer Deals Cards to Players
                 dlr.dealCrds(p1,d,26);
                 dlr.dealCrds(p2,d,26);
-=======
+                
                 //Deals Cards to Both Players
                 p1.dealCrds(d,26);
                 p2.dealCrds(d,26);
-<<<<<<< HEAD
->>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
-=======
->>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
-
+                
                 //Game Loop
                 do{
                     
@@ -166,23 +161,10 @@ int main(int argc, char** argv) {
                         cout<<"War has been initiated!"<<endl;
                         war(p1,p2,d);
                     }
-<<<<<<< HEAD
                      
                     //Clears Screen
                     cout<<"\n\n\n\n";
-                        
-<<<<<<< HEAD
-=======
-                        
-                    //Clears Screen
-                    cout<<endl<<endl<<endl<<endl<<endl<<endl;
-                    
->>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
-=======
-                    //Clears Screen
-                    cout<<endl<<endl<<endl<<endl<<endl<<endl;
-                    
->>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
+                   
                 //End Game Condition
                 }while(p1.cntHand()!=52&&p2.cntHand()!=52);
 

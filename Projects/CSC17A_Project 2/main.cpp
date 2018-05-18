@@ -223,9 +223,9 @@ void war(Player &p1, Player &p2, Deck<Card> &d){
         
         //Display Cards Placed Down
         cout<<"Player 1 placed down a ";
-            prntCrd(d,p1.getTop());
+            prntCrd(d,crd1);
         cout<<"Player 2 placed down a ";
-            prntCrd(d,p2.getTop());
+            prntCrd(d,crd2);
             
         //If Player 1's Card is Higher
         if(*d.getCard(crd1) > *d.getCard(crd2)){

@@ -4,19 +4,8 @@
  * Created on May 9, 2018, 10:23 AM
  */
 
-<<<<<<< HEAD
 //Include User Libraries
 #include "AbstractCard.h"
-#include "Card.h"
-using namespace std;
-
-//Card Constructor
-Card::Card() : AbstractCard(){
-}
-
-//Card Overloaded Constructor
-=======
-//Included User Libraries
 #include "Card.h"
 using namespace std;
 
@@ -25,17 +14,12 @@ Card::Card() : AbstractCard(){
 }
 
 //Overloaded Card Constructor
->>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 Card::Card(int v) : AbstractCard(){
     if(v<=13&&v>=1) value=v;
     else {v%=13; v==0?value=13:value=v;}
 }
 
-<<<<<<< HEAD
 //Card Destructor
-=======
-//Destructor
->>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 Card::~Card(){
 }
 
@@ -74,11 +58,7 @@ string Card::getName(int v){
     //else throw exception
 }
 
-<<<<<<< HEAD
-//Overloaded > Function
-=======
 //Overloaded > Operator Function
->>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 bool Card::operator > (const Card &right){
     if(value==right.getVal()) return false;
     else if(value==1&&right.getVal()>1) return true;
@@ -86,11 +66,7 @@ bool Card::operator > (const Card &right){
     else return value>right.getVal();
 }
 
-<<<<<<< HEAD
-//Overloaded < Function
-=======
 //Overloaded < Operator Function
->>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 bool Card::operator < (const Card &right){
     if(value==right.getVal()) return false;
     else if(value==1&&right.getVal()>1) return false;
@@ -98,11 +74,7 @@ bool Card::operator < (const Card &right){
     else return value<right.getVal();
 }
 
-<<<<<<< HEAD
-//Overloaded == Function
-=======
 //Overloaded == Operator Function
->>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 bool Card::operator == (const Card &right){
     if(value==right.getVal()) return true;
     else return false;

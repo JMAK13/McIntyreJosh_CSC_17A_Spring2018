@@ -50,3 +50,22 @@ string Card::getName(int v){
     return s;
     //else throw exception
 }
+
+bool Card::operator > (const Card &right){
+    if(value==right.getVal()) return false;
+    else if(value==1&&right.getVal()>1) return true;
+    else if(value>1&&right.getVal()==1) return false;
+    else return value>right.getVal();
+}
+
+bool Card::operator < (const Card &right){
+    if(value==right.getVal()) return false;
+    else if(value==1&&right.getVal()>1) return false;
+    else if(value>1&&right.getVal()==1) return true;
+    else return value<right.getVal();
+}
+
+bool Card::operator == (const Card &right){
+    if(value==right.getVal()) return true;
+    else return false;
+}

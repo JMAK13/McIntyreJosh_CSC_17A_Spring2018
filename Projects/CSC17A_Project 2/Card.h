@@ -36,9 +36,9 @@ class Card:public AbstractCard{
         void setVal(int);
         
         //Relational Operator Overloaded Functions
-        bool operator > (const Card &right) {return this->value>right.getVal();}
-        bool operator < (const Card &right) {return this->value<right.getVal();}
-        bool operator == (const Card &right) {return this->value==right.getVal();}
+        bool operator > (const Card &right);
+        bool operator < (const Card &right);
+        bool operator == (const Card &right);
         
         //Name Accessor Member Function
         virtual std::string getName(int)override;

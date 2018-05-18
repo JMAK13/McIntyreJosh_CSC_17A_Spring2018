@@ -65,7 +65,6 @@ int main(int argc, char** argv) {
             cout<<"If the cards are of the same value\nthen the 'War' protocol is initiated, each player will place down another face down card, then";
             cout<<"\nanother face up card, and whichever second face up card is of higher value that player takes all cards.";
             cout<<"\nPlayers keep repeating the 'War' protocol as long as their face ups cards are of the same value.";
-            cout<<"!!! IMPORTANT NOTE: Ace cards are the least valued cards while Kings are the most valued cards !!!";
             break;
         }
         

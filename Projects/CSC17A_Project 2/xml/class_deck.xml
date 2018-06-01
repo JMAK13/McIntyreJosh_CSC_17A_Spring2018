@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_deck" kind="class" language="C++" prot="public">
+    <compoundname>Deck</compoundname>
+    <includes refid="_deck_8h" local="no">Deck.h</includes>
+    <innerclass refid="class_deck_1_1_invalid_index" prot="public">Deck::InvalidIndex</innerclass>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_deck_1ac67164264363e53e294ca1358921b19a" prot="private" static="no" mutable="no">
+        <type>T **</type>
+        <definition>T** Deck&lt; T &gt;::card</definition>
+        <argsstring></argsstring>
+        <name>card</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Deck.h" line="14" column="1" bodyfile="Deck.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_deck_1a41ff874601bea655f9dec49c65461d9d" prot="private" static="no" mutable="no">
+        <type>int *</type>
+        <definition>int* Deck&lt; T &gt;::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Deck.h" line="15" column="1" bodyfile="Deck.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_deck_1a638318d80efa0f903c3706ae40207ae2" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Deck&lt; T &gt;::delt</definition>
+        <argsstring></argsstring>
+        <name>delt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Deck.h" line="17" column="1" bodyfile="Deck.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_deck_1aff7db376893424420f145714fd9230ea" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Deck&lt; T &gt;::nCards</definition>
+        <argsstring></argsstring>
+        <name>nCards</name>
+        <initializer>=52</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Deck.h" line="16" column="1" bodyfile="Deck.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_deck_1a7cb6b63b067cdaf3de1baeb5534d7271" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Deck&lt; T &gt;::Deck</definition>
+        <argsstring>()</argsstring>
+        <name>Deck</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Deck.h" line="20" column="1" bodyfile="Deck.h" bodystart="52" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_deck_1ab3294d971f9ecf25fd92d982aa2efad9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Deck&lt; T &gt;::~Deck</definition>
+        <argsstring>()</argsstring>
+        <name>~Deck</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Deck.h" line="23" column="1" bodyfile="Deck.h" bodystart="66" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_deck_1a66c6921f4ecf8c1b8653e9c4b787c150" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>T *</type>
+        <definition>T* Deck&lt; T &gt;::getCard</definition>
+        <argsstring>(int i) const</argsstring>
+        <name>getCard</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Deck.h" line="26" column="1" bodyfile="Deck.h" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_deck_1ae14e1d90f79f0feab99036164559cdd9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Deck&lt; T &gt;::getI</definition>
+        <argsstring>(int i) const</argsstring>
+        <name>getI</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Deck.h" line="29" column="1" bodyfile="Deck.h" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_deck_1a1714bb774b90483499d9aab08a7a29ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Deck&lt; T &gt;::setI</definition>
+        <argsstring>(int, int)</argsstring>
+        <name>setI</name>
+        <param>
+          <type>int</type>
+          <defname>i</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>v</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Deck.h" line="32" column="1" bodyfile="Deck.h" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_deck_1add2b30cd032ad01e7397ec0dc333419a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Deck&lt; T &gt;::numCards</definition>
+        <argsstring>() const</argsstring>
+        <name>numCards</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Deck.h" line="35" column="1" bodyfile="Deck.h" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_deck_1ae5cf657c1089ee0d88606c7e63feeb5d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Deck&lt; T &gt;::getDelt</definition>
+        <argsstring>() const</argsstring>
+        <name>getDelt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Deck.h" line="38" column="1" bodyfile="Deck.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_deck_1ad0aa6682496d7d68ea1799e2e0b596db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Deck&lt; T &gt;::setDelt</definition>
+        <argsstring>(int i)</argsstring>
+        <name>setDelt</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Deck.h" line="41" column="1" bodyfile="Deck.h" bodystart="41" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Deck.h" line="12" column="1" bodyfile="Deck.h" bodystart="12" bodyend="48"/>
+    <listofallmembers>
+      <member refid="class_deck_1ac67164264363e53e294ca1358921b19a" prot="private" virt="non-virtual"><scope>Deck</scope><name>card</name></member>
+      <member refid="class_deck_1a7cb6b63b067cdaf3de1baeb5534d7271" prot="public" virt="non-virtual"><scope>Deck</scope><name>Deck</name></member>
+      <member refid="class_deck_1a638318d80efa0f903c3706ae40207ae2" prot="private" virt="non-virtual"><scope>Deck</scope><name>delt</name></member>
+      <member refid="class_deck_1a66c6921f4ecf8c1b8653e9c4b787c150" prot="public" virt="non-virtual"><scope>Deck</scope><name>getCard</name></member>
+      <member refid="class_deck_1ae5cf657c1089ee0d88606c7e63feeb5d" prot="public" virt="non-virtual"><scope>Deck</scope><name>getDelt</name></member>
+      <member refid="class_deck_1ae14e1d90f79f0feab99036164559cdd9" prot="public" virt="non-virtual"><scope>Deck</scope><name>getI</name></member>
+      <member refid="class_deck_1a41ff874601bea655f9dec49c65461d9d" prot="private" virt="non-virtual"><scope>Deck</scope><name>index</name></member>
+      <member refid="class_deck_1aff7db376893424420f145714fd9230ea" prot="private" virt="non-virtual"><scope>Deck</scope><name>nCards</name></member>
+      <member refid="class_deck_1add2b30cd032ad01e7397ec0dc333419a" prot="public" virt="non-virtual"><scope>Deck</scope><name>numCards</name></member>
+      <member refid="class_deck_1ad0aa6682496d7d68ea1799e2e0b596db" prot="public" virt="non-virtual"><scope>Deck</scope><name>setDelt</name></member>
+      <member refid="class_deck_1a1714bb774b90483499d9aab08a7a29ae" prot="public" virt="non-virtual"><scope>Deck</scope><name>setI</name></member>
+      <member refid="class_deck_1ab3294d971f9ecf25fd92d982aa2efad9" prot="public" virt="non-virtual"><scope>Deck</scope><name>~Deck</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,142 @@
+\hypertarget{class_card}{}\section{Card Class Reference}
+\label{class_card}\index{Card@{Card}}
+
+
+{\ttfamily \#include $<$Card.\+h$>$}
+
+Inheritance diagram for Card\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_card}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_card_1_1_invalid_suit}{Invalid\+Suit}}
+\item 
+class \mbox{\hyperlink{class_card_1_1_negative_value}{Negative\+Value}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_card_a783f5854cbe8c183ee3d4414c01472c0}{Card}} ()
+\item 
+\mbox{\hyperlink{class_card_a85f2e4a438c7fdfcff3bc2c6c2f64e42}{Card}} (int)
+\item 
+\mbox{\hyperlink{class_card_acd5e2392580684236188040fa874dbf2}{Card}} (\mbox{\hyperlink{class_card}{Card}} \&)
+\item 
+\mbox{\hyperlink{class_card_a4e05b0b68e43e5e76c6194458cee874f}{$\sim$\+Card}} ()
+\item 
+virtual std\+::string \mbox{\hyperlink{class_card_aab1167b9d62b97601624f5c3bef55e8f}{get\+Suit}} () const override
+\item 
+virtual int \mbox{\hyperlink{class_card_ae413a3c5a9bcd7bb320a1e7dc6c10f08}{get\+Val}} () const override
+\item 
+void \mbox{\hyperlink{class_card_a9a6a690f4520a415de2043d8a59eae77}{set\+Suit}} (std\+::string)
+\item 
+void \mbox{\hyperlink{class_card_a803b8640efc785d0b704740bbefd7407}{set\+Val}} (int)
+\item 
+bool \mbox{\hyperlink{class_card_aa3f8343a4851dadfccffabb328da5213}{operator$>$}} (const \mbox{\hyperlink{class_card}{Card}} \&right)
+\item 
+bool \mbox{\hyperlink{class_card_aa82800b9e7be48b843e93e113f2472ef}{operator$<$}} (const \mbox{\hyperlink{class_card}{Card}} \&right)
+\item 
+bool \mbox{\hyperlink{class_card_ac1b1dcac4434f8cc98719bad7c1d18a3}{operator==}} (const \mbox{\hyperlink{class_card}{Card}} \&right)
+\item 
+virtual std\+::string \mbox{\hyperlink{class_card_a829622deae536453d23467ae15f42259}{get\+Name}} (int) override
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_card_a783f5854cbe8c183ee3d4414c01472c0}\label{class_card_a783f5854cbe8c183ee3d4414c01472c0}} 
+\index{Card@{Card}!Card@{Card}}
+\index{Card@{Card}!Card@{Card}}
+\subsubsection{\texorpdfstring{Card()}{Card()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Card\+::\+Card (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_card_a85f2e4a438c7fdfcff3bc2c6c2f64e42}\label{class_card_a85f2e4a438c7fdfcff3bc2c6c2f64e42}} 
+\index{Card@{Card}!Card@{Card}}
+\index{Card@{Card}!Card@{Card}}
+\subsubsection{\texorpdfstring{Card()}{Card()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Card\+::\+Card (\begin{DoxyParamCaption}\item[{int}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_card_acd5e2392580684236188040fa874dbf2}\label{class_card_acd5e2392580684236188040fa874dbf2}} 
+\index{Card@{Card}!Card@{Card}}
+\index{Card@{Card}!Card@{Card}}
+\subsubsection{\texorpdfstring{Card()}{Card()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Card\+::\+Card (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_card}{Card}} \&}]{card }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_card_a4e05b0b68e43e5e76c6194458cee874f}\label{class_card_a4e05b0b68e43e5e76c6194458cee874f}} 
+\index{Card@{Card}!````~Card@{$\sim$\+Card}}
+\index{````~Card@{$\sim$\+Card}!Card@{Card}}
+\subsubsection{\texorpdfstring{$\sim$\+Card()}{~Card()}}
+{\footnotesize\ttfamily Card\+::$\sim$\+Card (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_card_a829622deae536453d23467ae15f42259}\label{class_card_a829622deae536453d23467ae15f42259}} 
+\index{Card@{Card}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Card@{Card}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily string Card\+::get\+Name (\begin{DoxyParamCaption}\item[{int}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_abstract_card}{Abstract\+Card}}.
+
+\mbox{\Hypertarget{class_card_aab1167b9d62b97601624f5c3bef55e8f}\label{class_card_aab1167b9d62b97601624f5c3bef55e8f}} 
+\index{Card@{Card}!get\+Suit@{get\+Suit}}
+\index{get\+Suit@{get\+Suit}!Card@{Card}}
+\subsubsection{\texorpdfstring{get\+Suit()}{getSuit()}}
+{\footnotesize\ttfamily virtual std\+::string Card\+::get\+Suit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_abstract_card}{Abstract\+Card}}.
+
+\mbox{\Hypertarget{class_card_ae413a3c5a9bcd7bb320a1e7dc6c10f08}\label{class_card_ae413a3c5a9bcd7bb320a1e7dc6c10f08}} 
+\index{Card@{Card}!get\+Val@{get\+Val}}
+\index{get\+Val@{get\+Val}!Card@{Card}}
+\subsubsection{\texorpdfstring{get\+Val()}{getVal()}}
+{\footnotesize\ttfamily virtual int Card\+::get\+Val (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_abstract_card}{Abstract\+Card}}.
+
+\mbox{\Hypertarget{class_card_aa82800b9e7be48b843e93e113f2472ef}\label{class_card_aa82800b9e7be48b843e93e113f2472ef}} 
+\index{Card@{Card}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Card@{Card}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Card\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_card}{Card}} \&}]{right }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_card_ac1b1dcac4434f8cc98719bad7c1d18a3}\label{class_card_ac1b1dcac4434f8cc98719bad7c1d18a3}} 
+\index{Card@{Card}!operator==@{operator==}}
+\index{operator==@{operator==}!Card@{Card}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Card\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_card}{Card}} \&}]{right }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_card_aa3f8343a4851dadfccffabb328da5213}\label{class_card_aa3f8343a4851dadfccffabb328da5213}} 
+\index{Card@{Card}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Card@{Card}}
+\subsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool Card\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_card}{Card}} \&}]{right }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_card_a9a6a690f4520a415de2043d8a59eae77}\label{class_card_a9a6a690f4520a415de2043d8a59eae77}} 
+\index{Card@{Card}!set\+Suit@{set\+Suit}}
+\index{set\+Suit@{set\+Suit}!Card@{Card}}
+\subsubsection{\texorpdfstring{set\+Suit()}{setSuit()}}
+{\footnotesize\ttfamily void Card\+::set\+Suit (\begin{DoxyParamCaption}\item[{std\+::string}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_card_a803b8640efc785d0b704740bbefd7407}\label{class_card_a803b8640efc785d0b704740bbefd7407}} 
+\index{Card@{Card}!set\+Val@{set\+Val}}
+\index{set\+Val@{set\+Val}!Card@{Card}}
+\subsubsection{\texorpdfstring{set\+Val()}{setVal()}}
+{\footnotesize\ttfamily void Card\+::set\+Val (\begin{DoxyParamCaption}\item[{int}]{v }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_card_8h}{Card.\+h}}\item 
+\mbox{\hyperlink{_card_8cpp}{Card.\+cpp}}\end{DoxyCompactItemize}

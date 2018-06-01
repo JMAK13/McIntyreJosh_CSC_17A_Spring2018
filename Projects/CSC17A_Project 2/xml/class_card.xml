@@ -1,0 +1,275 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_card" kind="class" language="C++" prot="public">
+    <compoundname>Card</compoundname>
+    <basecompoundref refid="class_abstract_card" prot="public" virt="non-virtual">AbstractCard</basecompoundref>
+    <includes refid="_card_8h" local="no">Card.h</includes>
+    <innerclass refid="class_card_1_1_invalid_suit" prot="public">Card::InvalidSuit</innerclass>
+    <innerclass refid="class_card_1_1_negative_value" prot="public">Card::NegativeValue</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_card_1a5ac01df9ae312cdb06ed986397445cac" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Card::suit</definition>
+        <argsstring></argsstring>
+        <name>suit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Card.h" line="16" column="1" bodyfile="Card.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_card_1a57c4269cef032dac1f282c9b2be3be4d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Card::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Card.h" line="17" column="1" bodyfile="Card.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_card_1a783f5854cbe8c183ee3d4414c01472c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Card::Card</definition>
+        <argsstring>()</argsstring>
+        <name>Card</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Card.h" line="20" column="1" bodyfile="Card.cpp" bodystart="13" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_card_1a85f2e4a438c7fdfcff3bc2c6c2f64e42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Card::Card</definition>
+        <argsstring>(int)</argsstring>
+        <name>Card</name>
+        <param>
+          <type>int</type>
+          <defname>v</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Card.h" line="23" column="1" bodyfile="Card.cpp" bodystart="17" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_card_1acd5e2392580684236188040fa874dbf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Card::Card</definition>
+        <argsstring>(Card &amp;)</argsstring>
+        <name>Card</name>
+        <param>
+          <type><ref refid="class_card" kindref="compound">Card</ref> &amp;</type>
+          <defname>card</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Card.h" line="26" column="1" bodyfile="Card.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_card_1a4e05b0b68e43e5e76c6194458cee874f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Card::~Card</definition>
+        <argsstring>()</argsstring>
+        <name>~Card</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Card.h" line="29" column="1" bodyfile="Card.cpp" bodystart="30" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_card_1aab1167b9d62b97601624f5c3bef55e8f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>virtual std::string Card::getSuit</definition>
+        <argsstring>() const override</argsstring>
+        <name>getSuit</name>
+        <reimplements refid="class_abstract_card_1a5f2cb6af89c955cb73114e5187332672">getSuit</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Card.h" line="32" column="1" bodyfile="Card.h" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_card_1ae413a3c5a9bcd7bb320a1e7dc6c10f08" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>virtual int Card::getVal</definition>
+        <argsstring>() const override</argsstring>
+        <name>getVal</name>
+        <reimplements refid="class_abstract_card_1a8a2717e783c23642631d4793149eeef5">getVal</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Card.h" line="35" column="1" bodyfile="Card.h" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_card_1a9a6a690f4520a415de2043d8a59eae77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Card::setSuit</definition>
+        <argsstring>(std::string)</argsstring>
+        <name>setSuit</name>
+        <param>
+          <type>std::string</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Card.h" line="38" column="1" bodyfile="Card.cpp" bodystart="34" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_card_1a803b8640efc785d0b704740bbefd7407" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Card::setVal</definition>
+        <argsstring>(int)</argsstring>
+        <name>setVal</name>
+        <param>
+          <type>int</type>
+          <defname>v</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Card.h" line="41" column="1" bodyfile="Card.cpp" bodystart="44" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_card_1aa3f8343a4851dadfccffabb328da5213" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Card::operator&gt;</definition>
+        <argsstring>(const Card &amp;right)</argsstring>
+        <name>operator&gt;</name>
+        <param>
+          <type>const <ref refid="class_card" kindref="compound">Card</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Card.h" line="44" column="1" bodyfile="Card.cpp" bodystart="71" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_card_1aa82800b9e7be48b843e93e113f2472ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Card::operator&lt;</definition>
+        <argsstring>(const Card &amp;right)</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="class_card" kindref="compound">Card</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Card.h" line="47" column="1" bodyfile="Card.cpp" bodystart="79" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_card_1ac1b1dcac4434f8cc98719bad7c1d18a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Card::operator==</definition>
+        <argsstring>(const Card &amp;right)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="class_card" kindref="compound">Card</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Card.h" line="50" column="1" bodyfile="Card.cpp" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_card_1a829622deae536453d23467ae15f42259" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>string Card::getName</definition>
+        <argsstring>(int) override</argsstring>
+        <name>getName</name>
+        <reimplements refid="class_abstract_card_1aeea2d72ed1408e40f2f96bf80bb5ec42">getName</reimplements>
+        <param>
+          <type>int</type>
+          <defname>v</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Card.h" line="53" column="1" bodyfile="Card.cpp" bodystart="51" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="8">
+        <label>AbstractCard</label>
+        <link refid="class_abstract_card"/>
+      </node>
+      <node id="7">
+        <label>Card</label>
+        <link refid="class_card"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10">
+        <label>AbstractCard</label>
+        <link refid="class_abstract_card"/>
+      </node>
+      <node id="9">
+        <label>Card</label>
+        <link refid="class_card"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Card.h" line="14" column="1" bodyfile="Card.h" bodystart="14" bodyend="62"/>
+    <listofallmembers>
+      <member refid="class_card_1a783f5854cbe8c183ee3d4414c01472c0" prot="public" virt="non-virtual"><scope>Card</scope><name>Card</name></member>
+      <member refid="class_card_1a85f2e4a438c7fdfcff3bc2c6c2f64e42" prot="public" virt="non-virtual"><scope>Card</scope><name>Card</name></member>
+      <member refid="class_card_1acd5e2392580684236188040fa874dbf2" prot="public" virt="non-virtual"><scope>Card</scope><name>Card</name></member>
+      <member refid="class_card_1a829622deae536453d23467ae15f42259" prot="public" virt="virtual"><scope>Card</scope><name>getName</name></member>
+      <member refid="class_card_1aab1167b9d62b97601624f5c3bef55e8f" prot="public" virt="virtual"><scope>Card</scope><name>getSuit</name></member>
+      <member refid="class_card_1ae413a3c5a9bcd7bb320a1e7dc6c10f08" prot="public" virt="virtual"><scope>Card</scope><name>getVal</name></member>
+      <member refid="class_card_1aa82800b9e7be48b843e93e113f2472ef" prot="public" virt="non-virtual"><scope>Card</scope><name>operator&lt;</name></member>
+      <member refid="class_card_1ac1b1dcac4434f8cc98719bad7c1d18a3" prot="public" virt="non-virtual"><scope>Card</scope><name>operator==</name></member>
+      <member refid="class_card_1aa3f8343a4851dadfccffabb328da5213" prot="public" virt="non-virtual"><scope>Card</scope><name>operator&gt;</name></member>
+      <member refid="class_card_1a9a6a690f4520a415de2043d8a59eae77" prot="public" virt="non-virtual"><scope>Card</scope><name>setSuit</name></member>
+      <member refid="class_card_1a803b8640efc785d0b704740bbefd7407" prot="public" virt="non-virtual"><scope>Card</scope><name>setVal</name></member>
+      <member refid="class_card_1a5ac01df9ae312cdb06ed986397445cac" prot="private" virt="non-virtual"><scope>Card</scope><name>suit</name></member>
+      <member refid="class_card_1a57c4269cef032dac1f282c9b2be3be4d" prot="private" virt="non-virtual"><scope>Card</scope><name>value</name></member>
+      <member refid="class_card_1a4e05b0b68e43e5e76c6194458cee874f" prot="public" virt="non-virtual"><scope>Card</scope><name>~Card</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

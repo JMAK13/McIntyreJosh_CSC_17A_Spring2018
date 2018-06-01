@@ -22,6 +22,9 @@ class Card:public AbstractCard{
         //Constructor Taking a Card Value is a Parameter
         Card(int);
         
+        //Card Copy Constructor
+        Card(Card &);
+        
         //Destructor
         ~Card();
         
@@ -48,6 +51,14 @@ class Card:public AbstractCard{
         
         //Name Accessor Member Function
         virtual std::string getName(int)override;
+        
+        //Invalid Suit Exception
+        class InvalidSuit
+            {   };
+            
+        //Negative Value
+        class NegativeValue
+            {   };
 };
 
 #endif /* CARD_H */

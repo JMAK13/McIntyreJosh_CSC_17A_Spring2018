@@ -38,14 +38,16 @@ class Deck{
         int getDelt()const{return delt;}
         
         //Delt Mutator Member Function
-        void setDelt(int);
+        inline void setDelt(int i){
+            if(i>=0) delt=i;
+        };
+        
+        //Invalid Index Exception
+        class InvalidIndex
+            {   };
 };
 
-<<<<<<< HEAD
-//Deck Constructor
-=======
 //Default Deck Constructor
->>>>>>> 6a065f72fc054e49110588d2ea1c951ffce50626
 template <class T>
 Deck<T>::Deck(){
     //Sets Default Variable Values
@@ -73,14 +75,8 @@ Deck<T>::~Deck(){
 //Index Mutator Member Function
 template <class T>
 void Deck<T>::setI(int i, int v){
-    if(i>=0) index[i]=v;
-    //else throw invalid index exception
-}
-
-//Delt Mutator Member Function
-template <class T>
-void Deck<T>::setDelt(int i){
-    if(i>=0) delt=i;
+    if(i>=0&&v>=0) index[i]=v;
+    else throw InvalidIndex();
 }
 #endif /* DECK_H */
 

@@ -15,11 +15,24 @@
 template <class T>
 class Dealer:public GameEntity{
     public:
+        //Dealer Constructor
         Dealer();
+        
+        //Dealer Destructor
         ~Dealer();
+        
+        //Overloaded Virtual Function
         virtual bool isPlayer()const override{return isPl;}
+        
+        //Deals Cards
         void dealCrds(Player &,Deck<T> &,int);
+        
+        //Shuffles Cards
         void shuffle(Deck<T> &);
+        
+        //Invalid Card Amount Exception
+        class BadCardCount
+            {   };
 };
 
 //Dealer Constructor
@@ -36,7 +49,7 @@ Dealer<T>::~Dealer() {
 //Deals Card to Player from Deck
 template <class T>
 void Dealer<T>::dealCrds(Player &p, Deck<T> &d, int n){
-    if(n+d.getDelt()>52) {} //throw an exception
+    if(n+d.getDelt()>52) throw BadCardCount();
     else {
         int ind=0;
         for(int i=d.getDelt(); i<n+d.getDelt(); i++){

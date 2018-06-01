@@ -29,14 +29,14 @@ class Player:public GameEntity{
         //Overloaded Player Constructor with Name Parameter
         Player(string);
         
+        //Player Copy Constructor
+        Player(Player &);
+        
         //Player Destructor
         ~Player();
         
         //Overridden isPlayer Function from Base Class
         virtual bool isPlayer()const override{return isPl;}
-        
-        //Name Accessor Member Function
-        string getName()const{return name;}
         
         //Name Accessor Member Function
         string getName()const{return name;}
@@ -58,6 +58,10 @@ class Player:public GameEntity{
         
         //Moves an Index to the Bottom of the Array(Used for moving cards to bottom of deck)
         void toBot(int);
+        
+        //Invalid Index Exception
+        class BadIndex
+            {   };
 };
 
 #endif /* PLAYER_H */

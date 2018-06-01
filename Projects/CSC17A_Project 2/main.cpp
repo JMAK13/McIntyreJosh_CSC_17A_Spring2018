@@ -109,10 +109,15 @@ int main(int argc, char** argv) {
                 //Initialize Deck Suits, Values, and the Dealer's Hand's Indexes
                 for(int i=0; i<52; i++){
                     //Initialize Card Suits
+                    try{
                     if(i>=0 &&i<=12) d.getCard(i)->setSuit("Spades");
                     if(i>=13&&i<=25) d.getCard(i)->setSuit("Clubs");
                     if(i>=26&&i<=38) d.getCard(i)->setSuit("Hearts");
                     if(i>=39&&i<=51) d.getCard(i)->setSuit("Diamonds");
+                    }
+                    catch(Card::InvalidSuit){
+                        cout<<"Invalid suit has been entered.\n";
+                    }
                 }
 
                 //Dealer Deals Cards to Players
@@ -185,6 +190,9 @@ int main(int argc, char** argv) {
                 cin>>ans;
 
             }while(toupper(ans)=='Y');
+            
+            //Exit Message
+            cout<<"It was fun playing, hope to see you again soon!\n";
             
             //Exits Game Protocol
             break;

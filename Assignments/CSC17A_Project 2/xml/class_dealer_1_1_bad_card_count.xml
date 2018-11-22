@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_dealer_1_1_bad_card_count" kind="class" language="C++" prot="public">
+    <compoundname>Dealer::BadCardCount</compoundname>
+    <includes refid="_dealer_8h" local="no">Dealer.h</includes>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Dealer.h" line="35" column="1" bodyfile="Dealer.h" bodystart="34" bodyend="35"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

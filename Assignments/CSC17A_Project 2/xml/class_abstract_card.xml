@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_abstract_card" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>AbstractCard</compoundname>
+    <derivedcompoundref refid="class_card" prot="public" virt="non-virtual">Card</derivedcompoundref>
+    <includes refid="_abstract_card_8h" local="no">AbstractCard.h</includes>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_abstract_card_1a5f2cb6af89c955cb73114e5187332672" prot="private" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string AbstractCard::getSuit</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getSuit</name>
+        <reimplementedby refid="class_card_1aab1167b9d62b97601624f5c3bef55e8f">getSuit</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AbstractCard.h" line="15" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abstract_card_1a8a2717e783c23642631d4793149eeef5" prot="private" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int AbstractCard::getVal</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getVal</name>
+        <reimplementedby refid="class_card_1ae413a3c5a9bcd7bb320a1e7dc6c10f08">getVal</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AbstractCard.h" line="16" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abstract_card_1aeea2d72ed1408e40f2f96bf80bb5ec42" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string AbstractCard::getName</definition>
+        <argsstring>(int)=0</argsstring>
+        <name>getName</name>
+        <reimplementedby refid="class_card_1a829622deae536453d23467ae15f42259">getName</reimplementedby>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AbstractCard.h" line="17" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="0">
+        <label>AbstractCard</label>
+        <link refid="class_abstract_card"/>
+      </node>
+      <node id="1">
+        <label>Card</label>
+        <link refid="class_card"/>
+        <childnode refid="0" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="AbstractCard.h" line="14" column="1" bodyfile="AbstractCard.h" bodystart="14" bodyend="18"/>
+    <listofallmembers>
+      <member refid="class_abstract_card_1aeea2d72ed1408e40f2f96bf80bb5ec42" prot="private" virt="pure-virtual"><scope>AbstractCard</scope><name>getName</name></member>
+      <member refid="class_abstract_card_1a5f2cb6af89c955cb73114e5187332672" prot="private" virt="pure-virtual"><scope>AbstractCard</scope><name>getSuit</name></member>
+      <member refid="class_abstract_card_1a8a2717e783c23642631d4793149eeef5" prot="private" virt="pure-virtual"><scope>AbstractCard</scope><name>getVal</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

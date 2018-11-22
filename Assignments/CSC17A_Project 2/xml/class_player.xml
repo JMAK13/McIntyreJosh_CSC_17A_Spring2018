@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_player" kind="class" language="C++" prot="public">
+    <compoundname>Player</compoundname>
+    <basecompoundref refid="class_game_entity" prot="public" virt="non-virtual">GameEntity</basecompoundref>
+    <includes refid="_player_8h" local="no">Player.h</includes>
+    <innerclass refid="class_player_1_1_bad_index" prot="public">Player::BadIndex</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_player_1acf0355128a99ee20ad9931b760fb2de1" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Player::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player.h" line="22" column="1" bodyfile="Player.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1afc4e9a4cb12f2e1e5d4861a2e7d1ac2a" prot="private" static="no" mutable="no">
+        <type>int *</type>
+        <definition>int* Player::hand</definition>
+        <argsstring></argsstring>
+        <name>hand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player.h" line="23" column="1" bodyfile="Player.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1a112571f13e7b5ee9720c006063e9cf65" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Player::inHand</definition>
+        <argsstring></argsstring>
+        <name>inHand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player.h" line="24" column="1" bodyfile="Player.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_player_1affe0cc3cb714f6deb4e62f0c0d3f1fd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Player::Player</definition>
+        <argsstring>()</argsstring>
+        <name>Player</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player.h" line="27" column="1" bodyfile="Player.cpp" bodystart="14" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1ab6de8696558d726f4f733c2e1f07b828" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Player::Player</definition>
+        <argsstring>(string)</argsstring>
+        <name>Player</name>
+        <param>
+          <type>string</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player.h" line="30" column="1" bodyfile="Player.cpp" bodystart="25" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1ad2d305f9af724e761a491b7a85a020e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Player::Player</definition>
+        <argsstring>(Player &amp;)</argsstring>
+        <name>Player</name>
+        <param>
+          <type><ref refid="class_player" kindref="compound">Player</ref> &amp;</type>
+          <defname>player</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player.h" line="33" column="1" bodyfile="Player.cpp" bodystart="36" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1a749d2c00e1fe0f5c2746f7505a58c062" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Player::~Player</definition>
+        <argsstring>()</argsstring>
+        <name>~Player</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player.h" line="36" column="1" bodyfile="Player.cpp" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1a95535954a888f7e37896d26d12ae2975" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool Player::isPlayer</definition>
+        <argsstring>() const override</argsstring>
+        <name>isPlayer</name>
+        <reimplements refid="class_game_entity_1a6528d6c01269ce943d690ca607e4cff8">isPlayer</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player.h" line="39" column="1" bodyfile="Player.h" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1a4939193fc637f75bf7a11118334dae7e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Player::getName</definition>
+        <argsstring>() const</argsstring>
+        <name>getName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player.h" line="42" column="1" bodyfile="Player.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1a47a59334ee6ddc63016a453b98f3da65" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Player::getHand</definition>
+        <argsstring>(int i) const</argsstring>
+        <name>getHand</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player.h" line="45" column="1" bodyfile="Player.h" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1a38bb763292ccae8492422a2f2c15be5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player::setHand</definition>
+        <argsstring>(int, int)</argsstring>
+        <name>setHand</name>
+        <param>
+          <type>int</type>
+          <defname>i</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>v</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player.h" line="48" column="1" bodyfile="Player.cpp" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1a7267ccfd35abdbedfc85935e968f2857" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Player::cntHand</definition>
+        <argsstring>()</argsstring>
+        <name>cntHand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player.h" line="51" column="1" bodyfile="Player.cpp" bodystart="54" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1a30bb76d5226dbba96a318fc4e9fcf537" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Player::getTop</definition>
+        <argsstring>()</argsstring>
+        <name>getTop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player.h" line="54" column="1" bodyfile="Player.cpp" bodystart="63" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1a08590552e6997c5ae39a7af8463b8763" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player::setTop</definition>
+        <argsstring>()</argsstring>
+        <name>setTop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player.h" line="57" column="1" bodyfile="Player.cpp" bodystart="70" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1aadaa98941bffa5f85269786929fddcd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player::toBot</definition>
+        <argsstring>(int)</argsstring>
+        <name>toBot</name>
+        <param>
+          <type>int</type>
+          <defname>c</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player.h" line="60" column="1" bodyfile="Player.cpp" bodystart="82" bodyend="99"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="28">
+        <label>GameEntity</label>
+        <link refid="class_game_entity"/>
+      </node>
+      <node id="27">
+        <label>Player</label>
+        <link refid="class_player"/>
+        <childnode refid="28" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="30">
+        <label>GameEntity</label>
+        <link refid="class_game_entity"/>
+      </node>
+      <node id="29">
+        <label>Player</label>
+        <link refid="class_player"/>
+        <childnode refid="30" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Player.h" line="20" column="1" bodyfile="Player.h" bodystart="20" bodyend="65"/>
+    <listofallmembers>
+      <member refid="class_player_1a7267ccfd35abdbedfc85935e968f2857" prot="public" virt="non-virtual"><scope>Player</scope><name>cntHand</name></member>
+      <member refid="class_player_1a47a59334ee6ddc63016a453b98f3da65" prot="public" virt="non-virtual"><scope>Player</scope><name>getHand</name></member>
+      <member refid="class_player_1a4939193fc637f75bf7a11118334dae7e" prot="public" virt="non-virtual"><scope>Player</scope><name>getName</name></member>
+      <member refid="class_player_1a30bb76d5226dbba96a318fc4e9fcf537" prot="public" virt="non-virtual"><scope>Player</scope><name>getTop</name></member>
+      <member refid="class_player_1afc4e9a4cb12f2e1e5d4861a2e7d1ac2a" prot="private" virt="non-virtual"><scope>Player</scope><name>hand</name></member>
+      <member refid="class_player_1a112571f13e7b5ee9720c006063e9cf65" prot="private" virt="non-virtual"><scope>Player</scope><name>inHand</name></member>
+      <member refid="class_game_entity_1adebee205c33cf1563ea5d9504b070944" prot="protected" virt="non-virtual"><scope>Player</scope><name>isPl</name></member>
+      <member refid="class_player_1a95535954a888f7e37896d26d12ae2975" prot="public" virt="virtual"><scope>Player</scope><name>isPlayer</name></member>
+      <member refid="class_player_1acf0355128a99ee20ad9931b760fb2de1" prot="private" virt="non-virtual"><scope>Player</scope><name>name</name></member>
+      <member refid="class_player_1affe0cc3cb714f6deb4e62f0c0d3f1fd8" prot="public" virt="non-virtual"><scope>Player</scope><name>Player</name></member>
+      <member refid="class_player_1ab6de8696558d726f4f733c2e1f07b828" prot="public" virt="non-virtual"><scope>Player</scope><name>Player</name></member>
+      <member refid="class_player_1ad2d305f9af724e761a491b7a85a020e0" prot="public" virt="non-virtual"><scope>Player</scope><name>Player</name></member>
+      <member refid="class_player_1a38bb763292ccae8492422a2f2c15be5f" prot="public" virt="non-virtual"><scope>Player</scope><name>setHand</name></member>
+      <member refid="class_player_1a08590552e6997c5ae39a7af8463b8763" prot="public" virt="non-virtual"><scope>Player</scope><name>setTop</name></member>
+      <member refid="class_player_1aadaa98941bffa5f85269786929fddcd1" prot="public" virt="non-virtual"><scope>Player</scope><name>toBot</name></member>
+      <member refid="class_player_1a749d2c00e1fe0f5c2746f7505a58c062" prot="public" virt="non-virtual"><scope>Player</scope><name>~Player</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.14">
+  <compound refid="class_abstract_card" kind="class"><name>AbstractCard</name>
+    <member refid="class_abstract_card_1a5f2cb6af89c955cb73114e5187332672" kind="function"><name>getSuit</name></member>
+    <member refid="class_abstract_card_1a8a2717e783c23642631d4793149eeef5" kind="function"><name>getVal</name></member>
+    <member refid="class_abstract_card_1aeea2d72ed1408e40f2f96bf80bb5ec42" kind="function"><name>getName</name></member>
+  </compound>
+  <compound refid="class_dealer_1_1_bad_card_count" kind="class"><name>Dealer::BadCardCount</name>
+  </compound>
+  <compound refid="class_player_1_1_bad_index" kind="class"><name>Player::BadIndex</name>
+  </compound>
+  <compound refid="class_card" kind="class"><name>Card</name>
+    <member refid="class_card_1a5ac01df9ae312cdb06ed986397445cac" kind="variable"><name>suit</name></member>
+    <member refid="class_card_1a57c4269cef032dac1f282c9b2be3be4d" kind="variable"><name>value</name></member>
+    <member refid="class_card_1a783f5854cbe8c183ee3d4414c01472c0" kind="function"><name>Card</name></member>
+    <member refid="class_card_1a85f2e4a438c7fdfcff3bc2c6c2f64e42" kind="function"><name>Card</name></member>
+    <member refid="class_card_1acd5e2392580684236188040fa874dbf2" kind="function"><name>Card</name></member>
+    <member refid="class_card_1a4e05b0b68e43e5e76c6194458cee874f" kind="function"><name>~Card</name></member>
+    <member refid="class_card_1aab1167b9d62b97601624f5c3bef55e8f" kind="function"><name>getSuit</name></member>
+    <member refid="class_card_1ae413a3c5a9bcd7bb320a1e7dc6c10f08" kind="function"><name>getVal</name></member>
+    <member refid="class_card_1a9a6a690f4520a415de2043d8a59eae77" kind="function"><name>setSuit</name></member>
+    <member refid="class_card_1a803b8640efc785d0b704740bbefd7407" kind="function"><name>setVal</name></member>
+    <member refid="class_card_1aa3f8343a4851dadfccffabb328da5213" kind="function"><name>operator&gt;</name></member>
+    <member refid="class_card_1aa82800b9e7be48b843e93e113f2472ef" kind="function"><name>operator&lt;</name></member>
+    <member refid="class_card_1ac1b1dcac4434f8cc98719bad7c1d18a3" kind="function"><name>operator==</name></member>
+    <member refid="class_card_1a829622deae536453d23467ae15f42259" kind="function"><name>getName</name></member>
+  </compound>
+  <compound refid="class_dealer" kind="class"><name>Dealer</name>
+    <member refid="class_dealer_1a6b2f0b132a7aac7650308365f9bb5cd7" kind="function"><name>Dealer</name></member>
+    <member refid="class_dealer_1a775914655b99de05565bcc2e117f47c5" kind="function"><name>~Dealer</name></member>
+    <member refid="class_dealer_1aa59b2493c7935d90eeb046433af00fa2" kind="function"><name>isPlayer</name></member>
+    <member refid="class_dealer_1a26da04b81fcbeaa6c7fb68e04de5bc8e" kind="function"><name>dealCrds</name></member>
+    <member refid="class_dealer_1ad15430c5e44be12ed63fa5a8bccf5205" kind="function"><name>shuffle</name></member>
+  </compound>
+  <compound refid="class_deck" kind="class"><name>Deck</name>
+    <member refid="class_deck_1ac67164264363e53e294ca1358921b19a" kind="variable"><name>card</name></member>
+    <member refid="class_deck_1a41ff874601bea655f9dec49c65461d9d" kind="variable"><name>index</name></member>
+    <member refid="class_deck_1a638318d80efa0f903c3706ae40207ae2" kind="variable"><name>delt</name></member>
+    <member refid="class_deck_1aff7db376893424420f145714fd9230ea" kind="variable"><name>nCards</name></member>
+    <member refid="class_deck_1a7cb6b63b067cdaf3de1baeb5534d7271" kind="function"><name>Deck</name></member>
+    <member refid="class_deck_1ab3294d971f9ecf25fd92d982aa2efad9" kind="function"><name>~Deck</name></member>
+    <member refid="class_deck_1a66c6921f4ecf8c1b8653e9c4b787c150" kind="function"><name>getCard</name></member>
+    <member refid="class_deck_1ae14e1d90f79f0feab99036164559cdd9" kind="function"><name>getI</name></member>
+    <member refid="class_deck_1a1714bb774b90483499d9aab08a7a29ae" kind="function"><name>setI</name></member>
+    <member refid="class_deck_1add2b30cd032ad01e7397ec0dc333419a" kind="function"><name>numCards</name></member>
+    <member refid="class_deck_1ae5cf657c1089ee0d88606c7e63feeb5d" kind="function"><name>getDelt</name></member>
+    <member refid="class_deck_1ad0aa6682496d7d68ea1799e2e0b596db" kind="function"><name>setDelt</name></member>
+  </compound>
+  <compound refid="class_game_entity" kind="class"><name>GameEntity</name>
+    <member refid="class_game_entity_1adebee205c33cf1563ea5d9504b070944" kind="variable"><name>isPl</name></member>
+    <member refid="class_game_entity_1a6528d6c01269ce943d690ca607e4cff8" kind="function"><name>isPlayer</name></member>
+  </compound>
+  <compound refid="class_deck_1_1_invalid_index" kind="class"><name>Deck::InvalidIndex</name>
+  </compound>
+  <compound refid="class_card_1_1_invalid_suit" kind="class"><name>Card::InvalidSuit</name>
+  </compound>
+  <compound refid="class_card_1_1_negative_value" kind="class"><name>Card::NegativeValue</name>
+  </compound>
+  <compound refid="class_player" kind="class"><name>Player</name>
+    <member refid="class_player_1acf0355128a99ee20ad9931b760fb2de1" kind="variable"><name>name</name></member>
+    <member refid="class_player_1afc4e9a4cb12f2e1e5d4861a2e7d1ac2a" kind="variable"><name>hand</name></member>
+    <member refid="class_player_1a112571f13e7b5ee9720c006063e9cf65" kind="variable"><name>inHand</name></member>
+    <member refid="class_player_1affe0cc3cb714f6deb4e62f0c0d3f1fd8" kind="function"><name>Player</name></member>
+    <member refid="class_player_1ab6de8696558d726f4f733c2e1f07b828" kind="function"><name>Player</name></member>
+    <member refid="class_player_1ad2d305f9af724e761a491b7a85a020e0" kind="function"><name>Player</name></member>
+    <member refid="class_player_1a749d2c00e1fe0f5c2746f7505a58c062" kind="function"><name>~Player</name></member>
+    <member refid="class_player_1a95535954a888f7e37896d26d12ae2975" kind="function"><name>isPlayer</name></member>
+    <member refid="class_player_1a4939193fc637f75bf7a11118334dae7e" kind="function"><name>getName</name></member>
+    <member refid="class_player_1a47a59334ee6ddc63016a453b98f3da65" kind="function"><name>getHand</name></member>
+    <member refid="class_player_1a38bb763292ccae8492422a2f2c15be5f" kind="function"><name>setHand</name></member>
+    <member refid="class_player_1a7267ccfd35abdbedfc85935e968f2857" kind="function"><name>cntHand</name></member>
+    <member refid="class_player_1a30bb76d5226dbba96a318fc4e9fcf537" kind="function"><name>getTop</name></member>
+    <member refid="class_player_1a08590552e6997c5ae39a7af8463b8763" kind="function"><name>setTop</name></member>
+    <member refid="class_player_1aadaa98941bffa5f85269786929fddcd1" kind="function"><name>toBot</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="_8dep_8inc" kind="file"><name>.dep.inc</name>
+  </compound>
+  <compound refid="_abstract_card_8h" kind="file"><name>AbstractCard.h</name>
+  </compound>
+  <compound refid="_card_8cpp" kind="file"><name>Card.cpp</name>
+  </compound>
+  <compound refid="_card_8h" kind="file"><name>Card.h</name>
+  </compound>
+  <compound refid="_dealer_8h" kind="file"><name>Dealer.h</name>
+  </compound>
+  <compound refid="_deck_8h" kind="file"><name>Deck.h</name>
+  </compound>
+  <compound refid="_game_entity_8h" kind="file"><name>GameEntity.h</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1a2574b6bd3a960d04be445ff3d8e62b1f" kind="function"><name>prntCrd</name></member>
+    <member refid="main_8cpp_1a603890cf970d26f9db4d1a32637a5a6a" kind="function"><name>war</name></member>
+    <member refid="main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_player_8cpp" kind="file"><name>Player.cpp</name>
+  </compound>
+  <compound refid="_player_8h" kind="file"><name>Player.h</name>
+  </compound>
+</doxygenindex>

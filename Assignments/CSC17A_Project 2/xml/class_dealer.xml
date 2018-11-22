@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_dealer" kind="class" language="C++" prot="public">
+    <compoundname>Dealer</compoundname>
+    <basecompoundref refid="class_game_entity" prot="public" virt="non-virtual">GameEntity</basecompoundref>
+    <includes refid="_dealer_8h" local="no">Dealer.h</includes>
+    <innerclass refid="class_dealer_1_1_bad_card_count" prot="public">Dealer::BadCardCount</innerclass>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_dealer_1a6b2f0b132a7aac7650308365f9bb5cd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Dealer&lt; T &gt;::Dealer</definition>
+        <argsstring>()</argsstring>
+        <name>Dealer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="19" column="1" bodyfile="Dealer.h" bodystart="40" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1a775914655b99de05565bcc2e117f47c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Dealer&lt; T &gt;::~Dealer</definition>
+        <argsstring>()</argsstring>
+        <name>~Dealer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="22" column="1" bodyfile="Dealer.h" bodystart="46" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1aa59b2493c7935d90eeb046433af00fa2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool Dealer&lt; T &gt;::isPlayer</definition>
+        <argsstring>() const override</argsstring>
+        <name>isPlayer</name>
+        <reimplements refid="class_game_entity_1a6528d6c01269ce943d690ca607e4cff8">isPlayer</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="25" column="1" bodyfile="Dealer.h" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1a26da04b81fcbeaa6c7fb68e04de5bc8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dealer&lt; T &gt;::dealCrds</definition>
+        <argsstring>(Player &amp;, Deck&lt; T &gt; &amp;, int)</argsstring>
+        <name>dealCrds</name>
+        <param>
+          <type><ref refid="class_player" kindref="compound">Player</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <param>
+          <type><ref refid="class_deck" kindref="compound">Deck</ref>&lt; T &gt; &amp;</type>
+          <defname>d</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>n</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="28" column="1" bodyfile="Dealer.h" bodystart="51" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1ad15430c5e44be12ed63fa5a8bccf5205" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dealer&lt; T &gt;::shuffle</definition>
+        <argsstring>(Deck&lt; T &gt; &amp;)</argsstring>
+        <name>shuffle</name>
+        <param>
+          <type><ref refid="class_deck" kindref="compound">Deck</ref>&lt; T &gt; &amp;</type>
+          <defname>d</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="31" column="1" bodyfile="Dealer.h" bodystart="65" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="11">
+        <label>Dealer&lt; T &gt;</label>
+        <link refid="class_dealer"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>GameEntity</label>
+        <link refid="class_game_entity"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="13">
+        <label>Dealer&lt; T &gt;</label>
+        <link refid="class_dealer"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>GameEntity</label>
+        <link refid="class_game_entity"/>
+      </node>
+    </collaborationgraph>
+    <location file="Dealer.h" line="16" column="1" bodyfile="Dealer.h" bodystart="16" bodyend="36"/>
+    <listofallmembers>
+      <member refid="class_dealer_1a26da04b81fcbeaa6c7fb68e04de5bc8e" prot="public" virt="non-virtual"><scope>Dealer</scope><name>dealCrds</name></member>
+      <member refid="class_dealer_1a6b2f0b132a7aac7650308365f9bb5cd7" prot="public" virt="non-virtual"><scope>Dealer</scope><name>Dealer</name></member>
+      <member refid="class_game_entity_1adebee205c33cf1563ea5d9504b070944" prot="protected" virt="non-virtual"><scope>Dealer</scope><name>isPl</name></member>
+      <member refid="class_dealer_1aa59b2493c7935d90eeb046433af00fa2" prot="public" virt="virtual"><scope>Dealer</scope><name>isPlayer</name></member>
+      <member refid="class_dealer_1ad15430c5e44be12ed63fa5a8bccf5205" prot="public" virt="non-virtual"><scope>Dealer</scope><name>shuffle</name></member>
+      <member refid="class_dealer_1a775914655b99de05565bcc2e117f47c5" prot="public" virt="non-virtual"><scope>Dealer</scope><name>~Dealer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

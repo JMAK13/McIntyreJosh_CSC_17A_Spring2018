@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_game_entity" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>GameEntity</compoundname>
+    <derivedcompoundref refid="class_dealer" prot="public" virt="non-virtual">Dealer&lt; T &gt;</derivedcompoundref>
+    <derivedcompoundref refid="class_player" prot="public" virt="non-virtual">Player</derivedcompoundref>
+    <includes refid="_game_entity_8h" local="no">GameEntity.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_game_entity_1adebee205c33cf1563ea5d9504b070944" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool GameEntity::isPl</definition>
+        <argsstring></argsstring>
+        <name>isPl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GameEntity.h" line="13" column="1" bodyfile="GameEntity.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_game_entity_1a6528d6c01269ce943d690ca607e4cff8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool GameEntity::isPlayer</definition>
+        <argsstring>() const =0</argsstring>
+        <name>isPlayer</name>
+        <reimplementedby refid="class_dealer_1aa59b2493c7935d90eeb046433af00fa2">isPlayer</reimplementedby>
+        <reimplementedby refid="class_player_1a95535954a888f7e37896d26d12ae2975">isPlayer</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GameEntity.h" line="15" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="18">
+        <label>Dealer&lt; T &gt;</label>
+        <link refid="class_dealer"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>GameEntity</label>
+        <link refid="class_game_entity"/>
+      </node>
+      <node id="19">
+        <label>Player</label>
+        <link refid="class_player"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="GameEntity.h" line="11" column="1" bodyfile="GameEntity.h" bodystart="11" bodyend="16"/>
+    <listofallmembers>
+      <member refid="class_game_entity_1adebee205c33cf1563ea5d9504b070944" prot="protected" virt="non-virtual"><scope>GameEntity</scope><name>isPl</name></member>
+      <member refid="class_game_entity_1a6528d6c01269ce943d690ca607e4cff8" prot="public" virt="pure-virtual"><scope>GameEntity</scope><name>isPlayer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
